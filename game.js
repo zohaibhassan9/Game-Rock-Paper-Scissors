@@ -52,5 +52,21 @@ const result = document.getElementById("result");
 const choices = ['rock', 'paper', 'scissors'];
 
 const resultDisplay = document.getElementById('result');
-const byttons = document.querySelectorAll('.choices button');
+const buttons = document.querySelectorAll('.choices button');
+
+buttons.forEach(button => {
+button.addEventListener('click', ()=>{
+const playerChoice = button.id;
+const computerChoice = getComputerChoice();
+const winner = determineWinner(playerChoice, computerChoice);
+displayResult(playerChoice, computerChoice, winner);
+
+  });
+});
+
+
+function getComputerChoice(){
+const randomIndex = Math.floor(Math.random() * choices.lenght);
+return choices[randomIndex];
+}
 
