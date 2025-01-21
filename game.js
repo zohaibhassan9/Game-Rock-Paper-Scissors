@@ -54,6 +54,7 @@ const choices = ['rock', 'paper', 'scissors'];
 const resultDisplay = document.getElementById('result');
 const buttons = document.querySelectorAll('.choices button');
 
+
 buttons.forEach(button => {
 button.addEventListener('click', ()=>{
 const playerChoice = button.id;
